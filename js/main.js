@@ -7,8 +7,9 @@ import TodoList from './todo-list.js';
   console.log("running");
   //Event hanlders
   const submitBtn = document.getElementById('submitBtn');
+  const accordionBtns = document.querySelectorAll('.tabpanel button');
   //
-  const accordion = new Accordion();
+  const accordion = new Accordion('Accordion-test');
   const form = new Form('form');
   const table = new DataTable();
   const todo = new TodoList();
@@ -18,5 +19,12 @@ import TodoList from './todo-list.js';
     e.preventDefault();
     form.submitForm();
   });
+
+  accordionBtns.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      accordion.togglePanel(e);
+    })
+  })
 
 })();
