@@ -18,7 +18,10 @@ export default class Form {
     for (const element of this.elements) {
       if (element.value.trim() === "") {
         invalidElements.push(element);
-      } else if (element.name === "email" && !this.isEmailValid(element.value)) {
+      } else if (
+        element.name === "email" &&
+        !this.isEmailValid(element.value)
+      ) {
         // Check email format for non-empty email fields
         invalidElements.push(element);
       }
@@ -63,9 +66,3 @@ export default class Form {
     }
   }
 }
-
-// accepts a form element
-// gets form input elements and stores them in var
-// method to check if form inputs contain valid text
-// if no valid text displays error message for each invalid input
-//

@@ -13,7 +13,7 @@ export default class Accordion {
     const button = document.getElementById(e.target.id);
     const content = button.nextElementSibling;
     const isCurrentlyOpen = content.style.display === "block";
-    
+
     if (isCurrentlyOpen) {
       // If the clicked panel is currently open, just close it
       content.style.display = "none";
