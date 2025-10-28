@@ -1,30 +1,28 @@
-import Accordion from './accordion.js';
-import Form from './form.js';
-import DataTable from './data-table.js';
-import TodoList from './todo-list.js';
+import Accordion from "./accordion.js";
+import Form from "./form.js";
+import DataTable from "./data-table.js";
+import TodoList from "./todo-list.js";
 
 (function () {
   console.log("running");
   //Event hanlders
-  const submitBtn = document.getElementById('submitBtn');
-  const accordionBtns = document.querySelectorAll('.tabpanel button');
+  const submitBtn = document.getElementById("submitBtn");
+  const accordionBtns = document.querySelectorAll(".tabpanel button");
   //
-  const accordion = new Accordion('Accordion-test');
-  const form = new Form('form');
+  const accordion = new Accordion("Accordion-test");
+  const form = new Form("form");
   const table = new DataTable();
   const todo = new TodoList();
 
-
-  submitBtn.addEventListener('click',(e) => {
+  submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
     form.submitForm();
   });
 
   accordionBtns.forEach((button) => {
-    button.addEventListener('click', (e) => {
+    button.addEventListener("click", (e) => {
       e.preventDefault();
       accordion.togglePanel(e);
-    })
-  })
-
+    });
+  });
 })();
