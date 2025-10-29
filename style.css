@@ -52,3 +52,8 @@ section {
     flex-direction: column;
     gap: 8px;
 }
+#todolist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
