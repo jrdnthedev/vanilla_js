@@ -46,3 +46,9 @@ section {
     padding: 8px;
     display: none;
 }
+
+#todocontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
