@@ -49,9 +49,10 @@ import TodoList from "./todo-list.js";
   ]
   const accordion = new Accordion("Accordion-test");
   const form = new Form("form");
-  const table = new DataTable(tabledata);
+  const table = new DataTable(tabledata,'table');
   const todo = new TodoList([]);
 
+  table.render();
   submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
     form.submitForm();

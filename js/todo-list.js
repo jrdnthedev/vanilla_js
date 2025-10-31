@@ -15,7 +15,7 @@ export default class TodoList {
     this.render();
   }
 
-  render = () => {
+  render() {
     const container = document.getElementById("todolist");
     container.innerHTML = "";
     this.tasks.forEach((task, index) => {
