@@ -4,9 +4,11 @@ export default class TodoList {
   }
 
   addTask(task) {
-    if (task.length) {
+    if (task.length && !this.tasks.includes(task)) {
       this.tasks.push(task);
       this.render();
+    } else {
+      alert('cannot complete operation!');
     }
   }
 
